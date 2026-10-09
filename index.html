@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f6f1">
+  <title>Little Moments</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a href="#" class="brand">little moments<span>.</span></a>
+    <span class="top-note">A small personal journal</span>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">MY PRIVATE JOURNAL · VOL. 01</div>
+      <h1>Some moments<br>deserve to <em>stay.</em></h1>
+      <p>A little collection of thoughts, memories, flowers, and things worth keeping.</p>
+      <button class="primary-btn" onclick="openJournal()">Open the journal ↗</button>
+      <div class="cover-footer">
+        <span>EST. WITH LOVE & CARE</span>
+        <span>TAKE YOUR TIME ↓</span>
+      </div>
+    </section>
+
+    <div id="journal" class="hidden">
+
+      <section class="welcome section">
+        <div class="eyebrow">A NOTE FOR YOU</div>
+        <h2>For my <em>Samira.</em></h2>
+        <p class="welcome-text">
+          Samira Chowdhury, some people make ordinary days feel special.
+          You somehow make even the smallest moments worth remembering.
+          This little corner of the internet is for you.
+        </p>
+        <div class="nickname-row">
+          <span>My Kuchupuchu</span>
+          <span>Fluffy Pillow</span>
+          <span>Josna</span>
+          <span>Hotty</span>
+          <span>Sexy</span>
+          <span>Shundori</span>
+          <span>Nayika</span>
+        </div>
+      </section>
+
+      <section class="section flower-section">
+        <div class="eyebrow">01 / A LITTLE GARDEN</div>
+        <h2>Flowers for <em>you.</em></h2>
+        <p>One little touch, and a garden of love slowly blooms for you.</p>
+
+        <div id="flowerGarden" class="flower-garden" aria-live="polite">
+          <span class="flower">🌷</span>
+          <span class="flower">🌸</span>
+          <span class="flower">🌹</span>
+        </div>
+
+        <button class="primary-btn" onclick="growFlowers()">
+          Let love bloom 🌸
+        </button>
+        <p id="flowerMessage" class="message"></p>
+      </section>
+
+      <section class="section quiz-section">
+        <div class="eyebrow">02 / TEN LITTLE QUESTIONS</div>
+        <h2>A little game for <em>my favourite.</em></h2>
+        <p>Ten tiny questions, a hundred reasons to smile. Every answer gets 5/5.</p>
+
+        <div class="quiz-progress">
+          <span id="questionCounter">Question 1 of 10</span>
+          <span id="scoreCounter">Score: 0/50</span>
+        </div>
+
+        <div class="progress-track">
+          <div id="progressBar"></div>
+        </div>
+
+        <div class="question-card">
+          <div id="questionEmoji" class="question-emoji">💗</div>
+          <h3 id="questionText">Loading question...</h3>
+          <div id="answerOptions" class="answer-options"></div>
+          <p id="answerFeedback" class="answer-feedback" aria-live="polite"></p>
+
+          <div id="resultMessages" class="result-messages hidden" aria-live="polite">
+            <p id="resultMessageText"></p>
+            <button class="primary-btn" id="anotherMessageButton" onclick="showAnotherMessage()">
+              Another little message 💌
+            </button>
+            <button class="text-btn" onclick="restartQuiz()">
+              Play again ↻
+            </button>
+          </div>
+
+          <button id="nextQuestion" class="primary-btn hidden" onclick="nextQuestion()">
+            Next question →
+          </button>
+        </div>
+      </section>
+
+      <section class="section quote-section">
+        <div class="eyebrow">03 / THOUGHTS TO KEEP</div>
+        <h2>A few words, <em>just because.</em></h2>
+
+        <div class="quote-card">
+          <span class="quote-mark">“</span>
+          <p id="quoteText">Some people make the world feel softer just by being in it.</p>
+          <span id="quoteAuthor" class="quote-author">— A little note for you</span>
+          <button class="text-btn" onclick="newQuote()">Read another note ↗</button>
+        </div>
+      </section>
+
+      <section class="section letter-section">
+        <div class="eyebrow">04 / SEALED WITH AFFECTION</div>
+        <h2>A letter for <em>my Josna.</em></h2>
+        <p>Some feelings are easier to write than to say out loud.</p>
+
+        <button class="primary-btn" onclick="toggleLetter()" id="letterButton">
+          Open your letter 💌
+        </button>
+
+        <article id="loveLetter" class="letter hidden">
+          <p>My dearest Samira,</p>
+          <p>
+            Hey, Kuchupuchu. If you are reading this, I hope you are smiling
+            even a little. I made this tiny place because you deserve something
+            made with thought, patience, and a little bit of silliness.
+          </p>
+          <p>
+            You are my Fluffy Pillow, my Josna, my Shundori, my Nayika,
+            and all those ridiculous cute names that somehow fit you perfectly.
+            You do not have to be perfect to be special to me. You can be
+            sleepy, grumpy, dramatic, quiet, or playful—you are still you.
+          </p>
+          <p>
+            I hope life gives you a thousand reasons to smile. And whenever
+            a day feels heavy, I hope you remember that you are appreciated
+            more than a webpage could ever explain.
+          </p>
+          <p>Keep being your lovely self, my Kuchupuchu. 🌷</p>
+          <p class="signature">Yours, with a smile,<br><strong>Towki</strong></p>
+        </article>
+      </section>
+
+      <section class="final-section">
+        <div class="eyebrow">ONE LAST THING</div>
+        <div class="big-heart">♡</div>
+        <h2>Hey, <em>Shundori.</em></h2>
+        <p id="finalMessage">
+          Out of all the little things in this world, I am really glad you are one of mine.
+        </p>
+        <button class="primary-btn" onclick="showSurprise()">One last surprise ✨</button>
+        <p id="surpriseMessage" class="surprise-message" aria-live="polite"></p>
+      </section>
+
+      <footer class="footer">
+        <span>Little Moments © 2026</span>
+        <button class="text-btn" onclick="goHome()">Back to cover ↑</button>
+      </footer>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
